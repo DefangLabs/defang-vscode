@@ -2,9 +2,13 @@
 
 The easiest way to use [Defang](https://defang.io) with VS Code.
 
-The Defang VS Code Extension automatically configures the DEfang MCP Server. This includes built-in tools to allow users to deploy and manage their Defang cloud services with VS Code.
+The Defang VS Code Extension automatically configures the Defang MCP Server. This MCP server includes built-in tools to allow users to deploy and manage their Defang cloud services with VS Code.
 
 ## MCP Tools
+
+### Estimate
+
+The `estimate` tool calculates an estimate of the cost of deploying your project with Defang. It analyzes your project files and determines the expected monthly cost based on the services defined in your Dockerfiles and compose.yaml files.
 
 ### Deploy
 
