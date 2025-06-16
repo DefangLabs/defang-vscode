@@ -1,0 +1,41 @@
+{
+	"name": "defang-vscode",
+	"displayName": "Defang",
+	"description": "The easiest way to use Defang in Visual Studio Code",
+	"version": "0.0.1",
+	"publisher": "DefangLabs",
+	"private": true,
+	"license": "MIT",
+	"repository": "https://github.com/DefangLabs/defang-vscode",
+	"engines": {
+		"vscode": "^1.101.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"mcpServerDefinitionProviders": [
+			{
+				"id": "defang",
+				"label": "Defang"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"download-api": "dts dev",
+		"postdownload-api": "dts main",
+		"postinstall": "npm run download-api"
+	},
+	"devDependencies": {
+		"@types/node": "^20",
+		"@vscode/dts": "^0.4.1",
+		"typescript": "^5.8.2"
+	}
+}
