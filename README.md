@@ -1,17 +1,26 @@
 # Defang VS Code Extension
 
-The easiest way to use Defang with VS Code.
+The easiest way to use [Defang](https://defang.io) with VS Code.
 
-## Local Development
+The Defang VS Code Extension automatically configures the DEfang MCP Server. This includes built-in tools to allow users to deploy and manage their Defang cloud services with VS Code.
 
-- Run `npm install` in terminal to install dependencies
-- Run the `Run Extension` target in the Debug View. This will:
-	- Start a task `npm: watch` to compile the code
-	- Run the extension in a new VS Code window
+## MCP Tools
 
-## Install Local Build
+### Deploy
 
-```
-npx @vscode/vsce package
-code --install-extension defang-vscode-x.y.z.vsix
-```
+The `deploy` tool scans your project directory for Dockerfiles and compose.yaml files, then deploys the detected service(s) using Defang. You can monitor the deployment process in the Defang Portal.
+
+### Destroy
+
+Given a project name or directory, the `destroy` tool identifies any services deployed with Defang and terminates them. If no services are found, it will display an appropriate message.
+
+### Services
+
+The `services` tool displays the details of all your services that are currently deployed in your project with Defang. It shows the Service Name, Deployment ID, Public URL and Service Status. If there are no services found, it will display an appropriate message.
+
+### Config
+
+* `list_configs`: Lists all the configurations available in your project.
+* `set_config`: Sets a configuration variable for your project.
+* `rm_config`: Removes a configuration variable from your project.
+

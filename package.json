@@ -4,6 +4,7 @@
 	"description": "The easiest way to use Defang in Visual Studio Code",
 	"version": "0.0.1",
 	"publisher": "DefangLabs",
+	"icon": "images/icon.png",
 	"private": true,
 	"license": "MIT",
 	"repository": "https://github.com/DefangLabs/defang-vscode",
