@@ -18,7 +18,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 async function configureDefangMcpServer(context: vscode.ExtensionContext) {
 	try {
-		vscode.window.showInformationMessage('Defang MCP server has been automatically configured and is now available in Claude Code.');
+		vscode.window.showInformationMessage('Defang MCP server has been automatically configured and is now available.');
 	} catch (error) {
 		console.error('Failed to configure Defang MCP server:', error);
 		vscode.window.showErrorMessage('Failed to configure Defang MCP server. Please try again manually.');
