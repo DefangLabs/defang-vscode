@@ -1,9 +1,9 @@
 {
-	"name": "defang-vscode",
-	"displayName": "Defang MCP",
+	"name": "defang",
+	"displayName": "Defang",
 	"description": "The easiest way to use Defang in Visual Studio Code",
 	"version": "0.1.3",
-	"publisher": "DefangLabs",
+	"publisher": "defang",
 	"icon": "images/icon.png",
 	"private": true,
 	"license": "MIT",
