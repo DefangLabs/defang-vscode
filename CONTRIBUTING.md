@@ -9,5 +9,5 @@
 
 ```
 npx @vscode/vsce package
-code --install-extension defang-vscode-x.y.z.vsix
+code --install-extension defang-x.y.z.vsix
 ```
