@@ -1,13 +1,7 @@
 ## Local Development
 
-- Run `npm install` in terminal to install dependencies
-- Run the `Run Extension` target in the Debug View. This will:
-	- Start a task `npm: watch` to compile the code
-	- Run the extension in a new VS Code window
-
-## Install Local Build
-
-```
-npx @vscode/vsce package
-code --install-extension defang-x.y.z.vsix
-```
+* `make dependencies` will install all necessary npm dependencies.
+* `make dev` will run the extension in development mode with live compilation.
+* `make build` will compile the extension code.
+* `make package` will create a `.vsix` file for the extension.
+* `make install` will package the extension and install it locally.
