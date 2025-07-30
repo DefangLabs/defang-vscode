@@ -22,5 +22,14 @@ install: package
 	latest_vsix=$$(ls -t defang-*.vsix | head -n 1); \
 	code --install-extension $$latest_vsix
 
-release:
-	vsce publish --pat "$VSCE_TOKEN"
+release-patch:
+	npm version patch
+	git push origin main --tags
+
+release-minor:
+	npm version minor
+	git push origin main --tags
+
+release-major:
+	npm version major
+	git push origin main --tags
