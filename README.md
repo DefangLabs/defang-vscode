@@ -1,3 +1,7 @@
+[VS Code](https://marketplace.visualstudio.com/items?itemName=DefangLabs.defang) • [Open VSX](https://open-vsx.org/extension/DefangLabs/defang)
+
+---
+
 # Defang VS Code Extension
 
 The easiest way to use [Defang](https://defang.io) with VS Code.
