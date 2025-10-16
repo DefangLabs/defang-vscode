@@ -3,7 +3,8 @@ import * as vscode from "vscode";
 
 export async function activate(context: vscode.ExtensionContext) {
   const appName = vscode.env.appName;
-  const clientId = clientIdForApp(appName);
+  const appHost = vscode.env.appHost;
+  const clientId = clientIdForApp(appName, appHost);
   const mcp = vscode.workspace.getConfiguration("mcp");
   const servers = mcp.get<Record<string, vscode.McpServerDefinition>>(
     "servers",
@@ -56,7 +57,7 @@ export async function activate(context: vscode.ExtensionContext) {
   }
 }
 
-function clientIdForApp(appName: string): string {
+function clientIdForApp(appName: string, appHost: string): string {
   switch (appName) {
     case "Cursor":
       return "cursor";
@@ -65,7 +66,10 @@ function clientIdForApp(appName: string): string {
     case "Visual Studio Code - Insiders":
       return "vscode-insiders";
     case "Visual Studio Code":
-      return "vscode";
+      if (appHost === "codespaces")
+        return "vscode-codespaces"
+      else
+        return "vscode";
   }
   return "vscode";
 }
