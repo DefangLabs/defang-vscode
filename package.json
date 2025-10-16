@@ -2,7 +2,7 @@
 	"name": "defang",
 	"displayName": "Defang",
 	"description": "The easiest way to use Defang in Visual Studio Code",
-	"version": "0.1.8",
+	"version": "0.1.9",
 	"publisher": "DefangLabs",
 	"icon": "images/icon.png",
 	"private": true,
