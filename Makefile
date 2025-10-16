@@ -17,6 +17,9 @@ build:
 package: build
 	npx @vscode/vsce package
 
+publish:
+	npx @vscode/vsce publish --pat "$$VSCE_TOKEN"
+
 # Package and install the extension locally
 install: package
 	latest_vsix=$$(ls -t defang-*.vsix | head -n 1); \
