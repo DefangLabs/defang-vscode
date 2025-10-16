@@ -21,7 +21,17 @@ jobs:
       - name: Build Extension
         run: npm run compile
 
+      - name: Build package
+        run: vsce package
+
       - name: Publish to Marketplace
-        run: vsce publish --pat "$VSCE_TOKEN"
+        run: |
+          vsce publish --pat "$VSCE_TOKEN" -i "defang-${{ github.ref_name }}.vsix"
         env:
           VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
+
+      - name: Upload VSIX Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: defang-${{ github.ref_name }}.vsix
+          path: defang-${{ github.ref_name }}.vsix
