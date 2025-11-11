@@ -51,7 +51,7 @@ export async function activate(context: vscode.ExtensionContext) {
     } catch (error) {
       console.error("Failed to install Defang MCP server:", error);
       vscode.window.showErrorMessage(
-        "Failed to configure Defang MCP server. Please try again manually."
+        "Failed to configure Defang MCP server. Please try again manually. Check 'window' output for details."
       );
     }
   }
@@ -66,10 +66,8 @@ function clientIdForApp(appName: string, appHost: string): string {
     case "Visual Studio Code - Insiders":
       return "vscode-insiders";
     case "Visual Studio Code":
-      if (appHost === "codespaces")
-        return "vscode-codespaces"
-      else
-        return "vscode";
+      if (appHost === "codespaces") return "vscode-codespaces";
+      else return "vscode";
   }
   return "vscode";
 }
